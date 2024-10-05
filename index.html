@@ -93,12 +93,14 @@
                 <p class="text-xl text-white pt-5">Share your favorite opinion and win and wp forum coffee mug!</p>
                 
                 <label class="input input-bordered w-3/4 rounded-lg flex items-center gap-2 justify-between">
-                    <input type="text" class=" " placeholder="Search" />
+                    <input type="text" id="searchPosts" class=""  placeholder="Search" />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 16 16"
                         fill="currentColor"
-                        class="h-4 w-4 opacity-70 cursor-pointer">
+                        id="searchIcon"
+                        class="h-4 w-4 cursor-pointer"
+                        onclick="handleSearch()">
                         <path
                         fill-rule="evenodd"
                         d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
@@ -140,17 +142,17 @@
             
             <div class="grid md:grid-cols-3 grid-cols-1 my-[20px] gap-5">
                 
-                <div class="md:col-span-2">
+                <div id="postsColumn" class="md:col-span-2">
                     
                     <!-- Common Card -->
                     <div class="flex gap-3 bg-[#F3F3F4] p-9 rounded-lg mb-7">
-                        <!-- Profile -->
+                        
                         <div class="relative">
                             <i class="absolute right-0 top-0 text-green-500 ri-circle-fill"></i>
-                            <img class="w-[100px] h-[100px] object-cover" src="/images/demo profile.png" alt="">
+                            <img class="w-[100px] h-[100px] object-cover" src="images/demo profile.png" alt="">
                         </div>
 
-                        <!-- Content -->
+                        
                         <div class="flex flex-col gap-3">
 
                             <div class="flex gap-4">
@@ -185,31 +187,15 @@
 
                 
                 
-                <div class="p-9 bg-[#F3F3F4] rounded-lg">
-                    <div class="flex flex-col ">
+                <div  class="p-9 bg-[#F3F3F4] rounded-lg">
+                    <div id="postArchiveColumn" class="flex flex-col ">
                         <div class="flex justify-between">
                             <h2 class="text-xl font-bold">Title</h2>
-                            <h2 class="text-md text-gray-500"><i class="ri-check-double-fill"></i> Mark as read (<span>4</span>)</h2>
+                            <h2 class="text-md text-gray-500"><i class="ri-check-double-fill"></i> Mark as read (<span id="readCount">0</span>)</h2>
 
                         </div>
                             
-                        <div class="bg-white flex justify-between items-center p-5 rounded-lg mt-5">
-                            <h2 class="text-xl font-semibold w-3/4">10 Kids Unaware of Their Halloween Costume</h2>
-                            <i class="ri-eye-fill text-lg text-[#717181]"></i>
-                            <h2 class="text-lg ">1558</h2>
-                        </div>
-
-                        <div class="bg-white flex justify-between items-center p-5 rounded-lg mt-5">
-                            <h2 class="text-xl font-semibold w-3/4">10 Kids Unaware of Their Halloween Costume</h2>
-                            <i class="ri-eye-fill text-lg text-[#717181]"></i>
-                            <h2 class="text-lg ">1558</h2>
-                        </div>
-
-                        <div class="bg-white flex justify-between items-center p-5 rounded-lg mt-5">
-                            <h2 class="text-xl font-semibold w-3/4">10 Kids Unaware of Their Halloween Costume</h2>
-                            <i class="ri-eye-fill text-lg text-[#717181]"></i>
-                            <h2 class="text-lg ">1558</h2>
-                        </div>
+                        
 
                     </div>
 
